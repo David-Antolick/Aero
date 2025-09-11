@@ -1,0 +1,68 @@
+# ===== Python build artifacts =====
+__pycache__/
+*.py[cod]
+*$py.class
+build/
+dist/
+.eggs/
+*.egg-info/
+.python-version
+
+# ===== Virtual environments =====
+.env/
+.venv/
+venv/
+ENV/
+
+# ===== Notebooks & caches =====
+.ipynb_checkpoints/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+
+# ===== Editors/OS =====
+*.swp
+*.swo
+.DS_Store
+.idea/
+.vscode/
+
+# ===== Secrets & environment =====
+# Keep example templates committed, but ignore real secrets
+*.env
+.env.*
+!*.env.example
+scripts/.env
+
+# ===== Data & artifacts (large / generated) =====
+# FAA source PDFs and other large files
+/data/**/*.pdf
+/data/**/*.PDF
+
+# Vector DB (local state)
+/storage/**
+!storage/.gitkeep
+
+# Local logs & outputs
+logs/
+*.log
+
+# ===== Model/cache directories =====
+# Hugging Face and transformer caches (if they end up in repo dir)
+/.cache/
+/transformers_cache/
+
+# ===== Temporary files =====
+*.tmp
+*.temp
+*.bak
+*.orig
+
+# ===== OS/Container =====
+# Keep .devcontainer committed for reproducible dev env
+# (No ignore needed here)
+
+# ===== Configs =====
+# Keep shared configs; ignore machine-local overrides if any
+configs/local.*.yaml
+configs/local.*.yml

@@ -1,0 +1,24 @@
+# LLM + API
+openai>=1.51.0,<2
+python-dotenv
+
+# Utilities
+tqdm
+pyyaml
+numpy
+
+# Vector store
+chromadb>=0.5.3
+
+# Embeddings
+sentence-transformers>=3.0.1
+transformers>=4.43.0
+
+# Tokenization
+tiktoken>=0.7.0
+
+# PDF parsing
+pypdf>=4.2.0
+
+# Semantic-aware chunking
+docling>=1.16.1

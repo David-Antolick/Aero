@@ -1,0 +1,26 @@
+[
+  {
+    "id": "CFR61",
+    "path": "/workspaces/Aero/data/14CFR_Part61.pdf"
+  },
+  {
+    "id": "CFR91",
+    "path": "/workspaces/Aero/data/14CFR_Part91_2011.pdf"
+  },
+  {
+    "id": "AIM",
+    "path": "/workspaces/Aero/data/AIM_Basic_2024-03-21.pdf"
+  },
+  {
+    "id": "AFH",
+    "path": "/workspaces/Aero/data/Airplane_Flying_Handbook.pdf"
+  },
+  {
+    "id": "IPH",
+    "path": "/workspaces/Aero/data/Instrument_Procedures_Handbook.pdf"
+  },
+  {
+    "id": "PHAK",
+    "path": "/workspaces/Aero/data/Pilot_Handbook_of_Aeronautical_Knowledge.pdf"
+  }
+]

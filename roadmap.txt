@@ -1,0 +1,138 @@
+Aero High-Level Roadmap
+=======================
+
+Phase 0 — Ground rules & decisions
+- Retrieval chunking: 300–800 tokens, 10–20% overlap (default: 512/15%).
+- Embeddings: pick one (all-MiniLM-L6-v2 for speed, BGE-small for quality).
+- Vector DB: Chroma (simple) or FAISS (later).
+- Top-k: 8, MMR 4.
+- Citations: file + page (e.g., PHAK ch.5 p.7).
+- Guardrails: "Educational use only" banner.
+
+Artifacts to create:
+- data/ (FAA PDFs)
+- ingest/manifest.json (list of PDFs)
+- configs/rag.yaml (chunk size, embed model, k, mmr)
+- prompts/system_faa_grounded.txt (disclaimer + style)
+- eval/qa_set.json (10–30 Qs + expected citations)
+
+Fast success test:
+- Ask: "Define ground effect" → short answer + page citation.
+
+------------------------------------------------------------
+
+Phase 1 — Retrieval MVP (2–3 days)
+Goal: Question → short answer + 2–3 citations.
+
+- PDF → chunks (+page_id, chapter, doc_id).
+- Embed and upsert to Chroma.
+- Retriever: k=8, MMR on.
+- Answer synthesis with citations.
+- Single /answer endpoint.
+
+Acceptance criteria:
+- ≥80% of seed Qs hit correct page.
+- Answers <200 words.
+
+------------------------------------------------------------
+
+Phase 2 — Grounding discipline & eval (2–3 days)
+Goal: Measurable correctness.
+
+- Eval harness (qa_set.json → /answer).
+- Metrics: retrieval hit rate, exact-match regs, citation validity.
+- Failure tags: not in sources / weak retrieval / hallucinated reg.
+
+Acceptance criteria:
+- Hit rate ≥0.85.
+- Zero hallucinated regs in 50 queries.
+
+------------------------------------------------------------
+
+Phase 3 — UX slice (1–2 days)
+Goal: One clean UI screen.
+
+- Input box + compact result.
+- Collapsible "Sources" with file/page.
+- Toggles: Short/Detailed, Show retrieval debug.
+- Sticky disclaimer.
+
+Acceptance criteria:
+- Click to open cited page image in 3 clicks.
+
+------------------------------------------------------------
+
+Phase 4 — Personalization hooks (2 days)
+Goal: Accept profile + logbook without breaking grounding.
+
+- aircraft_profile schema (type/year/POH V-speeds).
+- logbook_summary schema (hours, instrument, XC PIC).
+- Prompt rules: FAA first, personal data only for examples.
+
+Acceptance criteria:
+- Q: "What is Vr for my C172S?" → FAA def + profile Vr (clearly labeled).
+
+------------------------------------------------------------
+
+
+Phase 5 — Content expansion & provenance
+Goal: More FAA docs, track editions.
+
+- Start with PHAK, AFH, AIM, IRH, IPH, FAR 61/91.
+- Track edition/revision date.
+- Special chunking for glossaries/tables.
+- Exclude low-signal appendices.
+
+Acceptance criteria:
+- Coverage dashboard: docs ingested, pages, chunk count.
+
+------------------------------------------------------------
+
+Phase 6 — Quality & safety hardening (2–3 days)
+Goal: Reduce errors.
+
+- Add cross-encoder re-ranker.
+- Optimize MMR (λ=0.2–0.4).
+- "Skeptic mode" if similarity low → return "needs narrower query".
+- Unit tests: citation parser, page resolver.
+
+Acceptance criteria:
+- 30% fewer off-topic retrievals.
+- Zero broken citation links.
+
+------------------------------------------------------------
+
+Phase 7 — Infra, perf, and ops (1–3 days)
+Goal: Smooth on 4×3090 server.
+
+- Pin GPUs: 1 for LLM, 1 for embeddings/reranker.
+- Log: question hash, doc_ids, pages, latency, helpful flag.
+- Caching: memoize embeddings + short-term answer cache.
+- Health check: Chroma, disk, model.
+
+Acceptance criteria:
+- P50 latency <6s, P95 <10s.
+- Logs show <1% error rate.
+
+------------------------------------------------------------
+
+Risks:
+- PDF variability (columns, tables).
+- Over-citation drift.
+- User trust: must show edition/revision date.
+- Scope creep: stay PPL/IR first.
+
+------------------------------------------------------------
+
+Governance:
+- configs/rag.yaml controls chunking + model params.
+- eval/qa_set.json grows over time.
+- Changelog for ingestion/config changes.
+
+------------------------------------------------------------
+
+Day 1 usable:
+- Ask: "Explain wake turbulence categories."
+- Answer: 120–180 words + 2 citations (AIM + PHAK).
+- Button to open page image.
+- Banner: "Educational use only—do not use for operational decisions."

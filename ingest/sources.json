@@ -1,0 +1,38 @@
+[
+  {
+    "id": "PHAK",
+    "title": "Pilot's Handbook of Aeronautical Knowledge",
+    "url": "https://www.faa.gov/sites/faa.gov/files/2022-03/pilot_handbook.pdf",
+    "filename": "Pilot_Handbook_of_Aeronautical_Knowledge.pdf"
+  },
+  {
+    "id": "AFH",
+    "title": "Airplane Flying Handbook",
+    "url": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/00_afh_full.pdf",
+    "filename": "Airplane_Flying_Handbook.pdf"
+  },
+  {
+    "id": "IPH",
+    "title": "Instrument Procedures Handbook (16B)",
+    "url": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/instrument_procedures_handbook/FAA-H-8083-16B.pdf",
+    "filename": "Instrument_Procedures_Handbook.pdf"
+  },
+  {
+    "id": "AIM",
+    "title": "Aeronautical Information Manual (Basic w/ Chg1 & Chg2, 3/21/2024)",
+    "url": "https://www.faa.gov/air_traffic/publications/media/AIM-Basic-w-Chg1-and-Chg2-dtd-3-21-24.pdf",
+    "filename": "AIM_Basic_2024-03-21.pdf"
+  },
+  {
+    "id": "CFR61",
+    "title": "14 CFR Part 61 (Most recent PDF from govinfo)",
+    "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title14-vol2/pdf/CFR-2025-title14-vol2-part61.pdf",
+    "filename": "14CFR_Part61.pdf"
+  },
+  {
+    "id": "CFR91",
+    "title": "14 CFR Part 91 (Most recent PDF from govinfo)",
+    "url": "https://www.govinfo.gov/content/pkg/CFR-2011-title14-vol2/pdf/CFR-2011-title14-vol2-part91.pdf",
+    "filename": "14CFR_Part91_2011.pdf"
+  }
+]

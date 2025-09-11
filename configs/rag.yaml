@@ -1,0 +1,12 @@
+chunk_size_tokens: 512
+chunk_overlap_tokens: 77
+embed_model: BAAI/bge-small-en-v1.5
+vector_store: chroma
+persist_dir: storage/chroma
+top_k: 8
+mmr_lambda: 0.5
+mmr_k: 8
+max_initial_candidates: 32
+citation_format: "[{source_id} p.{page}]"
+system_prompt_path: prompts/system_faa_grounded.txt
+manifest_path: ingest/manifest.json
