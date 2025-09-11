@@ -2,7 +2,7 @@
   {
     "id": "PHAK",
     "title": "Pilot's Handbook of Aeronautical Knowledge",
-    "url": "https://www.faa.gov/sites/faa.gov/files/2022-03/pilot_handbook.pdf",
+    "url": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/faa-h-8083-25c.pdf",
     "filename": "Pilot_Handbook_of_Aeronautical_Knowledge.pdf"
   },
   {
@@ -12,27 +12,117 @@
     "filename": "Airplane_Flying_Handbook.pdf"
   },
   {
+    "id": "IFH",
+    "title": "Instrument Flying Handbook (FAA-H-8083-15B)",
+    "url": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/FAA-H-8083-15B.pdf",
+    "filename": "Instrument_Flying_Handbook.pdf"
+  },
+  {
     "id": "IPH",
-    "title": "Instrument Procedures Handbook (16B)",
+    "title": "Instrument Procedures Handbook (FAA-H-8083-9B)",
     "url": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/instrument_procedures_handbook/FAA-H-8083-16B.pdf",
     "filename": "Instrument_Procedures_Handbook.pdf"
   },
   {
+    "id": "AIH",
+    "title": "Aviation Instructor's Handbook (FAA-H-8083-9A)",
+    "url": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook/aviation_instructors_handbook.pdf",
+    "filename": "Aviation_Instructors_Handbook.pdf"
+  },
+  {
+    "id": "RMH",
+    "title": "Risk Management Handbook (FAA-H-8083-2A)",
+    "url": "https://www.faa.gov/sites/faa.gov/files/2022-06/risk_management_handbook_2A.pdf",
+    "filename": "Risk_Management_Handbook.pdf"
+  },
+  {
     "id": "AIM",
-    "title": "Aeronautical Information Manual (Basic w/ Chg1 & Chg2, 3/21/2024)",
+    "title": "Aeronautical Information Manual (2023)",
     "url": "https://www.faa.gov/air_traffic/publications/media/AIM-Basic-w-Chg1-and-Chg2-dtd-3-21-24.pdf",
     "filename": "AIM_Basic_2024-03-21.pdf"
   },
   {
+    "id": "CFR1",
+    "title": "14 CFR Part 1 - Definitions and Abbreviations",
+    "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title14-vol1/pdf/CFR-2025-title14-vol1-part1.pdf",
+    "filename": "14CFR_Part1.pdf"
+  },
+  {
     "id": "CFR61",
-    "title": "14 CFR Part 61 (Most recent PDF from govinfo)",
+    "title": "14 CFR Part 61 - Certification: Pilots, Flight Instructors, Ground Instructors",
     "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title14-vol2/pdf/CFR-2025-title14-vol2-part61.pdf",
     "filename": "14CFR_Part61.pdf"
   },
   {
+    "id": "CFR67",
+    "title": "14 CFR Part 67 - Medical Standards and Certification",
+    "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title14-vol2/pdf/CFR-2025-title14-vol2-part67.pdf",
+    "filename": "14CFR_Part67.pdf"
+  },
+  {
+    "id": "CFR71",
+    "title": "14 CFR Part 71 - Airspace",
+    "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title14-vol2/pdf/CFR-2025-title14-vol2-part71.pdf",
+    "filename": "14CFR_Part71.pdf"
+  },
+  {
     "id": "CFR91",
-    "title": "14 CFR Part 91 (Most recent PDF from govinfo)",
-    "url": "https://www.govinfo.gov/content/pkg/CFR-2011-title14-vol2/pdf/CFR-2011-title14-vol2-part91.pdf",
-    "filename": "14CFR_Part91_2011.pdf"
+    "title": "14 CFR Part 91 - General Operating and Flight Rules",
+    "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title14-vol2/pdf/CFR-2025-title14-vol2-part91.pdf",
+    "filename": "14CFR_Part91.pdf"
+  },
+  {
+    "id": "CFR135",
+    "title": "14 CFR Part 135 - Operating Requirements: Commuter and On Demand Operations",
+    "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title14-vol3/pdf/CFR-2025-title14-vol3-part135.pdf",
+    "filename": "14CFR_Part135.pdf"
+  },
+  {
+    "id": "CFR141",
+    "title": "14 CFR Part 141 - Pilot Schools",
+    "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title14-vol3/pdf/CFR-2025-title14-vol3-part141.pdf",
+    "filename": "14CFR_Part141.pdf"
+  },
+  {
+    "id": "CFR23",
+    "title": "14 CFR Part 23 - Airworthiness Standards: Normal Category Airplanes",
+    "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title14-vol1/pdf/CFR-2025-title14-vol1-part23.pdf",
+    "filename": "14CFR_Part23.pdf"
+  },
+  {
+    "id": "CFR25",
+    "title": "14 CFR Part 25 - Airworthiness Standards: Transport Category Airplanes",
+    "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title14-vol1/pdf/CFR-2025-title14-vol1-part25.pdf",
+    "filename": "14CFR_Part25.pdf"
+  },
+  {
+    "id": "CFR27",
+    "title": "14 CFR Part 27 - Airworthiness Standards: Normal Category Rotorcraft",
+    "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title14-vol1/pdf/CFR-2025-title14-vol1-part27.pdf",
+    "filename": "14CFR_Part27.pdf"
+  },
+  {
+    "id": "CFR29",
+    "title": "14 CFR Part 29 - Airworthiness Standards: Transport Category Rotorcraft",
+    "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title14-vol1/pdf/CFR-2025-title14-vol1-part29.pdf",
+    "filename": "14CFR_Part29.pdf"
+  },
+  {
+    "id": "CUG",
+    "title": "Aeronautical Chart User’s Guide (2025)",
+    "url": "https://aeronav.faa.gov/user_guide/cug-complete_20250612.pdf",
+    "filename": "Aeronautical_Chart_Users_Guide.pdf"
+  },
+  {
+    "id": "AC006B",
+    "title": "AC 00-6B - Aviation Weather (2016)",
+    "url": "https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_00-6B.pdf",
+    "filename": "AC_00-6B_Aviation_Weather.pdf"
+  },
+  {
+    "id": "AC0045H",
+    "title": "AC 00-45H - Aviation Weather Services (2016)",
+    "url": "https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_00-45H.pdf",
+    "filename": "AC_00-45H_Aviation_Weather_Services.pdf"
   }
 ]
