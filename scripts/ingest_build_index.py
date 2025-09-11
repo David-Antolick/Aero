@@ -6,7 +6,7 @@ from sentence_transformers import SentenceTransformer
 from rag.chunkers import DoclingHybridChunker
 
 CONFIG_PATH = "configs/rag.yaml"
-COLLECTION_NAME = "faa_phase0"
+COLLECTION_NAME = "faa_phase1"
 
 
 class STEmbedding:
