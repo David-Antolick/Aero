@@ -30,7 +30,7 @@ from openai._exceptions import OpenAIError
 import torch
 
 CONFIG_PATH = "configs/rag.yaml"
-COLLECTION_NAME = "faa_phase0"
+COLLECTION_NAME = "faa_phase1"
 
 
 class STEmbedding:
@@ -46,8 +46,13 @@ class STEmbedding:
         vecs = self.model.encode(texts, normalize_embeddings=True, show_progress_bar=False)
         return vecs.tolist()
 
-    def embed_query(self, text: str) -> List[float]:
-        return self.__call__([text])[0]
+    def embed_query(self, input):
+        if isinstance(input, str):
+            texts = [input]
+        else:
+            texts = list(input)
+        vecs = self.model.encode(texts, normalize_embeddings=True, show_progress_bar=False)
+        return vecs.tolist()
 
     def name(self) -> str:
         return f"sentence-transformers:{self.model_name}"
