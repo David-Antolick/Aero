@@ -1,86 +1,86 @@
 [
   {
     "id": "CFR1",
-    "path": "/workspaces/Aero/data/14CFR_Part1.pdf"
+    "path": "/workspaces/aero/data/14CFR_Part1.pdf"
   },
   {
     "id": "CFR135",
-    "path": "/workspaces/Aero/data/14CFR_Part135.pdf"
+    "path": "/workspaces/aero/data/14CFR_Part135.pdf"
   },
   {
     "id": "CFR141",
-    "path": "/workspaces/Aero/data/14CFR_Part141.pdf"
+    "path": "/workspaces/aero/data/14CFR_Part141.pdf"
   },
   {
     "id": "CFR23",
-    "path": "/workspaces/Aero/data/14CFR_Part23.pdf"
+    "path": "/workspaces/aero/data/14CFR_Part23.pdf"
   },
   {
     "id": "CFR25",
-    "path": "/workspaces/Aero/data/14CFR_Part25.pdf"
+    "path": "/workspaces/aero/data/14CFR_Part25.pdf"
   },
   {
     "id": "CFR27",
-    "path": "/workspaces/Aero/data/14CFR_Part27.pdf"
+    "path": "/workspaces/aero/data/14CFR_Part27.pdf"
   },
   {
     "id": "CFR29",
-    "path": "/workspaces/Aero/data/14CFR_Part29.pdf"
+    "path": "/workspaces/aero/data/14CFR_Part29.pdf"
   },
   {
     "id": "CFR61",
-    "path": "/workspaces/Aero/data/14CFR_Part61.pdf"
+    "path": "/workspaces/aero/data/14CFR_Part61.pdf"
   },
   {
     "id": "CFR67",
-    "path": "/workspaces/Aero/data/14CFR_Part67.pdf"
+    "path": "/workspaces/aero/data/14CFR_Part67.pdf"
   },
   {
     "id": "CFR71",
-    "path": "/workspaces/Aero/data/14CFR_Part71.pdf"
+    "path": "/workspaces/aero/data/14CFR_Part71.pdf"
   },
   {
     "id": "CFR91",
-    "path": "/workspaces/Aero/data/14CFR_Part91.pdf"
+    "path": "/workspaces/aero/data/14CFR_Part91.pdf"
   },
   {
     "id": "AC0045H",
-    "path": "/workspaces/Aero/data/AC_00-45H_Aviation_Weather_Services.pdf"
+    "path": "/workspaces/aero/data/AC_00-45H_Aviation_Weather_Services.pdf"
   },
   {
     "id": "AC006B",
-    "path": "/workspaces/Aero/data/AC_00-6B_Aviation_Weather.pdf"
+    "path": "/workspaces/aero/data/AC_00-6B_Aviation_Weather.pdf"
   },
   {
     "id": "AIM",
-    "path": "/workspaces/Aero/data/AIM_Basic_2024-03-21.pdf"
+    "path": "/workspaces/aero/data/AIM_Basic_2024-03-21.pdf"
   },
   {
     "id": "CUG",
-    "path": "/workspaces/Aero/data/Aeronautical_Chart_Users_Guide.pdf"
+    "path": "/workspaces/aero/data/Aeronautical_Chart_Users_Guide.pdf"
   },
   {
     "id": "AFH",
-    "path": "/workspaces/Aero/data/Airplane_Flying_Handbook.pdf"
+    "path": "/workspaces/aero/data/Airplane_Flying_Handbook.pdf"
   },
   {
     "id": "AIH",
-    "path": "/workspaces/Aero/data/Aviation_Instructors_Handbook.pdf"
+    "path": "/workspaces/aero/data/Aviation_Instructors_Handbook.pdf"
   },
   {
     "id": "IFH",
-    "path": "/workspaces/Aero/data/Instrument_Flying_Handbook.pdf"
+    "path": "/workspaces/aero/data/Instrument_Flying_Handbook.pdf"
   },
   {
     "id": "IPH",
-    "path": "/workspaces/Aero/data/Instrument_Procedures_Handbook.pdf"
+    "path": "/workspaces/aero/data/Instrument_Procedures_Handbook.pdf"
   },
   {
     "id": "PHAK",
-    "path": "/workspaces/Aero/data/Pilot_Handbook_of_Aeronautical_Knowledge.pdf"
+    "path": "/workspaces/aero/data/Pilot_Handbook_of_Aeronautical_Knowledge.pdf"
   },
   {
     "id": "RMH",
-    "path": "/workspaces/Aero/data/Risk_Management_Handbook.pdf"
+    "path": "/workspaces/aero/data/Risk_Management_Handbook.pdf"
   }
 ]
