@@ -29,9 +29,9 @@ def get_env(name: str, default: Optional[str] = None, required: bool = False) ->
 
 def main() -> None:
     # Config (env-first, with sensible defaults for your setup)
-    base_url = get_env("AERO_LLM_BASE_URL", "http://10.88.100.175:8000/v1")
-    api_key = get_env("AERO_LLM_API_KEY", "glm-local")  # most local servers accept any token
-    model = get_env("AERO_LLM_MODEL", "glm-4.5-air-awq")
+    base_url = get_env("AERO_LLM_BASE_URL")
+    api_key = get_env("AERO_LLM_API_KEY")  # most local servers accept any token
+    model = get_env("AERO_LLM_MODEL")
     timeout_s = float(get_env("AERO_LLM_TIMEOUT_S", "20"))
     retries = int(get_env("AERO_LLM_RETRIES", "3"))
     retry_delay_s = float(get_env("AERO_LLM_RETRY_DELAY_S", "1.5"))
