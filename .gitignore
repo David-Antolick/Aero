@@ -57,6 +57,7 @@ logs/
 *.temp
 *.bak
 *.orig
+*.txt
 
 # ===== OS/Container =====
 # Keep .devcontainer committed for reproducible dev env
