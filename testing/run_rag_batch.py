@@ -25,6 +25,7 @@ from scripts.ask_with_rag import (  # type: ignore
     COLLECTION_NAME,
     CONFIG_PATH,
     STEmbedding,
+    extract_message_text,
     format_citation,
     load_config,
     read_text,
@@ -66,9 +67,9 @@ class RagBatchRunner:
             "Include citations inline using the format [ID p.N]. If information is not in the context, say you don't have it."
         )
 
-        base_url = os.getenv("AERO_LLM_BASE_URL", "http://10.88.100.175:8000/v1")
+        base_url = os.getenv("AERO_LLM_BASE_URL")
         api_key = os.getenv("AERO_LLM_API_KEY", "glm-local")
-        self.model_name = os.getenv("AERO_LLM_MODEL", "glm-4.5-air-awq")
+        self.model_name = os.getenv("AERO_LLM_MODEL", "gpt-oss-20b")
         self.llm = OpenAI(base_url=base_url, api_key=api_key)
 
     def _retrieve(self, question: str, top_k: int) -> tuple[List[str], List[Dict[str, Any]]]:
@@ -107,7 +108,12 @@ class RagBatchRunner:
         except OpenAIError as exc:
             raise RuntimeError(f"LLM request failed: {exc}") from exc
 
-        answer = resp.choices[0].message.content.strip()
+        choice = resp.choices[0] if resp.choices else None
+        message = choice.message if choice else None
+        answer = extract_message_text(message).strip()
+        if not answer:
+            print("[WARN] LLM response contained no text payload; raw message follows:", file=sys.stderr)
+            print(message, file=sys.stderr)
         return {
             "answer": answer,
             "contexts": context_blocks,

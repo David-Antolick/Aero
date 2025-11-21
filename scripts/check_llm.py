@@ -10,13 +10,34 @@ Minimal readiness check for an OpenAI-compatible LLM endpoint.
 import os
 import sys
 import time
-from typing import Optional
+from typing import Any, Optional, Sequence
 
 from openai import OpenAI
 from openai._exceptions import OpenAIError
 
 from dotenv import load_dotenv
 load_dotenv()  # Load .env file if present
+
+
+def _normalize_content(raw: Any) -> str:
+    """Best-effort conversion of OpenAI response content to plain text."""
+    if raw is None:
+        return ""
+    if isinstance(raw, str):
+        return raw
+    if isinstance(raw, Sequence) and not isinstance(raw, (bytes, bytearray)):
+        parts: list[str] = []
+        for item in raw:
+            text: str | None = None
+            if isinstance(item, dict):
+                text = item.get("text") or item.get("content")
+            else:
+                text = getattr(item, "text", None) or getattr(item, "content", None)
+            if text:
+                parts.append(text)
+        if parts:
+            return "".join(parts)
+    return str(raw)
 
 
 def get_env(name: str, default: Optional[str] = None, required: bool = False) -> str:
@@ -74,7 +95,12 @@ def main() -> None:
                 max_tokens=4,
                 timeout=timeout_s,  # propagated by SDK
             )
-            content = resp.choices[0].message.content.strip()
+            choice = resp.choices[0]
+            message = choice.message if choice else None
+            content = _normalize_content(getattr(message, "content", None)).strip()
+            if not content:
+                print("[WARN] Model response had no text content; raw message:"
+                      f" {message!r}", file=sys.stderr)
             print(f"[OK] Model response: {content!r}")
             if content.upper() != "OK":
                 print("[WARN] Model did not echo 'OK'. Endpoint works but content differs.")

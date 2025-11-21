@@ -9,15 +9,12 @@ Success criteria for this script:
 Usage:
   python scripts/ask_with_rag.py --q "What are the requirements for a student pilot to solo?"
 
-Environment (can be set via scripts/.env or shell):
-  AERO_LLM_BASE_URL  (default http://10.88.100.175:8000/v1)
-  AERO_LLM_API_KEY   (default glm-local)
-  AERO_LLM_MODEL     (default glm-4.5-air-awq)
+
 """
 import argparse
 import os
 import sys
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Sequence
 
 import yaml as pyyaml
 import numpy as np
@@ -61,6 +58,47 @@ class STEmbedding:
 def load_config(path: str) -> Dict[str, Any]:
     with open(path, "r", encoding="utf-8") as f:
         return pyyaml.safe_load(f)
+
+
+def _normalize_content(raw: Any) -> str:
+    """Best-effort conversion of OpenAI response content to plain text."""
+    if raw is None:
+        return ""
+    if isinstance(raw, str):
+        return raw
+    if isinstance(raw, Sequence) and not isinstance(raw, (bytes, bytearray)):
+        parts: list[str] = []
+        for item in raw:
+            text: str | None = None
+            if isinstance(item, dict):
+                text = item.get("text") or item.get("content")
+            else:
+                text = getattr(item, "text", None) or getattr(item, "content", None)
+            if text:
+                parts.append(str(text))
+        if parts:
+            return "".join(parts)
+    return str(raw)
+
+
+def extract_message_text(message: Any) -> str:
+    """Return best-effort text from an OpenAI ChatCompletionMessage."""
+    if message is None:
+        return ""
+    # Native content field
+    content = getattr(message, "content", None)
+    if content:
+        return _normalize_content(content)
+    # Some servers (e.g., gpt-oss-20b) place text in reasoning_content
+    reasoning = getattr(message, "reasoning_content", None)
+    if reasoning:
+        return _normalize_content(reasoning)
+    # Handle dicts or other containers
+    if isinstance(message, dict):
+        for key in ("content", "reasoning_content", "text"):
+            if message.get(key):
+                return _normalize_content(message[key])
+    return ""
 
 
 def read_text(path: str) -> str:
@@ -147,9 +185,9 @@ def main() -> None:
     ]
 
     # LLM call
-    base_url = os.getenv("AERO_LLM_BASE_URL", "http://10.88.100.175:8000/v1")
+    base_url = os.getenv("AERO_LLM_BASE_URL")
     api_key = os.getenv("AERO_LLM_API_KEY", "glm-local")
-    model = os.getenv("AERO_LLM_MODEL", "glm-4.5-air-awq")
+    model = os.getenv("AERO_LLM_MODEL", "gpt-oss-20b")
 
     try:
         oai = OpenAI(base_url=base_url, api_key=api_key)
@@ -159,7 +197,11 @@ def main() -> None:
             temperature=0.0,
             max_tokens=2048,
         )
-        answer = resp.choices[0].message.content.strip()
+        choice = resp.choices[0] if resp.choices else None
+        message = choice.message if choice else None
+        answer = extract_message_text(message).strip()
+        if not answer:
+            print("[WARN] LLM response contained no text payload; raw message logged above.", file=sys.stderr)
         print("\n=== ANSWER ===\n")
         print(answer)
         print("\n=== DEBUG: First context block ===\n")
