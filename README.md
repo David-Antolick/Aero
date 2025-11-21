@@ -61,12 +61,6 @@ Key settings live in `configs/rag.yaml`:
 - `system_prompt_path` (default: `prompts/system_faa_grounded.txt`)
 - `manifest_path` (default: `ingest/manifest.json`)
 
-Environment variables (can be set in your shell or via a `.env` file):
-- `AERO_LLM_BASE_URL` (default `http://10.88.100.175:8000/v1`)
-- `AERO_LLM_API_KEY` (default `glm-local`)
-- `AERO_LLM_MODEL` (default `glm-4.5-air-awq`)
-- `AERO_EMBED_DEVICE` (`cuda` or `cpu`, default auto/`cpu`)
-- `AERO_LLM_TIMEOUT_S`, `AERO_LLM_RETRIES`, `AERO_LLM_RETRY_DELAY_S` (used by readiness check)
 
 Tip: you can create `scripts/.env` (git‑ignored) to store local values used by scripts.
 
