@@ -2,6 +2,7 @@ import os, json, uuid, yaml, argparse
 from tqdm import tqdm
 import chromadb
 from sentence_transformers import SentenceTransformer
+import torch
 
 from rag.chunkers import DoclingHybridChunker
 
@@ -69,7 +70,17 @@ def main():
 
     # Init embeddings + DB
     emb_model_name = cfg["embed_model"]
-    emb_fn = STEmbedding(emb_model_name)
+    env_dev_raw = os.getenv("AERO_EMBED_DEVICE", "").strip()
+    env_dev = env_dev_raw.lower()
+    if not env_dev or env_dev == "auto":
+        device = "cuda" if torch.cuda.is_available() else "cpu"
+    elif env_dev in ("cpu", "cuda"):
+        device = env_dev
+    elif env_dev.startswith("cuda:"):
+        device = env_dev_raw
+    else:
+        device = "cpu"
+    emb_fn = STEmbedding(emb_model_name, device=device)
 
     client = chromadb.PersistentClient(path=cfg["persist_dir"])
     if args.rebuild:

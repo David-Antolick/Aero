@@ -131,9 +131,14 @@ def main() -> None:
 
     # Retrieval
     emb_name = cfg["embed_model"]
-    env_dev = os.getenv("AERO_EMBED_DEVICE", "").lower().strip()
-    if env_dev == "cuda":
-        device = "cuda"
+    env_dev_raw = os.getenv("AERO_EMBED_DEVICE", "").strip()
+    env_dev = env_dev_raw.lower()
+    if not env_dev or env_dev == "auto":
+        device = "cuda" if torch.cuda.is_available() else "cpu"
+    elif env_dev in ("cpu", "cuda"):
+        device = env_dev
+    elif env_dev.startswith("cuda:"):
+        device = env_dev_raw
     else:
         device = "cpu"
     emb_fn = STEmbedding(emb_name, device=device)

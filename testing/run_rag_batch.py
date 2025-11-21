@@ -42,8 +42,16 @@ class RagBatchRunner:
         self.cfg = load_config(cfg_path)
         self.collection_name = collection_name
 
-        env_dev = os.getenv("AERO_EMBED_DEVICE", "").strip().lower()
-        device = "cuda" if env_dev == "cuda" else "cpu"
+        env_dev_raw = os.getenv("AERO_EMBED_DEVICE", "").strip()
+        env_dev = env_dev_raw.lower()
+        if not env_dev or env_dev == "auto":
+            device = "cuda" if torch.cuda.is_available() else "cpu"
+        elif env_dev in ("cpu", "cuda"):
+            device = env_dev
+        elif env_dev.startswith("cuda:"):
+            device = env_dev_raw
+        else:
+            device = "cpu"
         self.embed_fn = STEmbedding(self.cfg["embed_model"], device=device)
 
         persist_path = self.cfg.get("persist_dir", "storage/chroma")
