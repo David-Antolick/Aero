@@ -1,0 +1,424 @@
+{
+  "test_queries": [
+    {
+      "id": "Q01",
+      "category": "in_scope_known",
+      "intent": "PHAK - four forces",
+      "query": "According to the Pilot's Handbook of Aeronautical Knowledge, what four forces act on an airplane in steady flight and how do they balance?",
+      "expected_behavior": "Summarize lift, weight, thrust, and drag relationships from the PHAK Aerodynamics of Flight chapter with citation."
+    },
+    {
+      "id": "Q02",
+      "category": "in_scope_known",
+      "intent": "PHAK - stalls",
+      "query": "What indications of an impending stall does the PHAK describe and how should a pilot respond?",
+      "expected_behavior": "List buffet, control effectiveness changes, stall warning, and outline recovery guidance from PHAK Chapter 4."
+    },
+    {
+      "id": "Q03",
+      "category": "in_scope_known",
+      "intent": "PHAK - weight and balance",
+      "query": "Walk through the moment/arm method for computing center of gravity the way the PHAK explains it.",
+      "expected_behavior": "Explain the formula, table setup, and sample steps from the Weight and Balance chapter."
+    },
+    {
+      "id": "Q04",
+      "category": "in_scope_known",
+      "intent": "PHAK - illusions",
+      "query": "Which visual illusions during night or IMC approaches are highlighted in PHAK Chapter 17 and what corrections are suggested?",
+      "expected_behavior": "Enumerate at least runway width, slope, black-hole approaches, and describe recommended countermeasures."
+    },
+    {
+      "id": "Q05",
+      "category": "in_scope_known",
+      "intent": "PHAK - aeromedical",
+      "query": "What symptoms and corrective actions for hypoxia does the PHAK list in the Aeromedical Factors chapter?",
+      "expected_behavior": "Describe types of hypoxia, common signs, and mitigation (use of oxygen, descent)."
+    },
+    {
+      "id": "Q06",
+      "category": "in_scope_known",
+      "intent": "PHAK - ADM",
+      "query": "Summarize the DECIDE model for aeronautical decision-making presented in the PHAK.",
+      "expected_behavior": "List Detect, Estimate, Choose, Identify, Do, Evaluate with short explanations."
+    },
+    {
+      "id": "Q07",
+      "category": "in_scope_known",
+      "intent": "AFH - short-field takeoff",
+      "query": "How does the Airplane Flying Handbook recommend configuring and flying a short-field takeoff over a 50-foot obstacle?",
+      "expected_behavior": "Highlight flap settings, rotation speed, initial climb attitude, and obstacle clearance technique from AFH Chapter 5."
+    },
+    {
+      "id": "Q08",
+      "category": "in_scope_known",
+      "intent": "AFH - chandelles",
+      "query": "Describe the entry speed, bank angle, and pitch profile for a chandelle according to the AFH.",
+      "expected_behavior": "Summarize maneuver objectives, 180° climbing turn, and performance tolerances."
+    },
+    {
+      "id": "Q09",
+      "category": "in_scope_known",
+      "intent": "AFH - crosswind landing",
+      "query": "What crosswind landing techniques does the AFH advise and when should a go-around be initiated?",
+      "expected_behavior": "Compare crab vs. wing-low methods, include control positioning, and note go-around triggers."
+    },
+    {
+      "id": "Q10",
+      "category": "in_scope_known",
+      "intent": "AFH - slow flight",
+      "query": "Explain the AFH-recommended procedure and evaluation standards for slow flight.",
+      "expected_behavior": "Detail configuration, power changes, stall margin awareness, and ACS tolerances cited by AFH Chapter 4."
+    },
+    {
+      "id": "Q11",
+      "category": "in_scope_known",
+      "intent": "AFH - soft-field landing",
+      "query": "Outline the soft-field landing technique described in the AFH, including approach speed and touchdown attitude.",
+      "expected_behavior": "Mention power usage, nose-high attitude, and roll-out considerations."
+    },
+    {
+      "id": "Q12",
+      "category": "in_scope_known",
+      "intent": "AFH - emergency descent",
+      "query": "How does the AFH suggest performing an emergency descent while minimizing structural loads?",
+      "expected_behavior": "Address bank angle, configuration, airspeed limits, and descent planning."
+    },
+    {
+      "id": "Q13",
+      "category": "in_scope_known",
+      "intent": "IFH - unusual attitudes",
+      "query": "According to the Instrument Flying Handbook, what are the recovery steps for nose-high vs. nose-low unusual attitudes while on instruments?",
+      "expected_behavior": "Provide separate procedures emphasizing power, attitude, trim, and instrument scan."
+    },
+    {
+      "id": "Q14",
+      "category": "in_scope_known",
+      "intent": "IFH - instrument scan",
+      "query": "List the instrument scan techniques discussed in IFH Chapter 3 and describe when to use each.",
+      "expected_behavior": "Cover selective radial, selective control, constant rate, and emphasize workload management."
+    },
+    {
+      "id": "Q15",
+      "category": "in_scope_known",
+      "intent": "IFH - automation",
+      "query": "What automation management practices does the IFH recommend before entering IMC?",
+      "expected_behavior": "Mention mode awareness, cross-checking, briefing, and monitoring autopilot behavior."
+    },
+    {
+      "id": "Q16",
+      "category": "in_scope_known",
+      "intent": "IPH - holding entries",
+      "query": "How do you compute the proper entry for a standard holding pattern per the Instrument Procedures Handbook, and what timing adjustments apply above 14,000 feet?",
+      "expected_behavior": "Explain direct/parallel/teardrop logic and timing guidance."
+    },
+    {
+      "id": "Q17",
+      "category": "in_scope_known",
+      "intent": "IPH - approach briefing",
+      "query": "What elements should be included in an instrument approach briefing according to the IPH?",
+      "expected_behavior": "List altitudes, frequencies, final approach course, missed approach, and NOTAM considerations."
+    },
+    {
+      "id": "Q18",
+      "category": "in_scope_known",
+      "intent": "IPH - RNAV LPV",
+      "query": "Summarize how lateral and vertical sensitivity changes on an RNAV (GPS) LPV approach as described in the IPH.",
+      "expected_behavior": "Describe en route, terminal, final approach scaling, and compare to ILS precision."
+    },
+    {
+      "id": "Q19",
+      "category": "in_scope_known",
+      "intent": "AIH - communication",
+      "query": "Which elements of effective communication does the Aviation Instructor's Handbook highlight, and how can instructors mitigate barriers?",
+      "expected_behavior": "Discuss source, symbol, receiver, plus strategies for overcoming barriers like lack of common experience."
+    },
+    {
+      "id": "Q20",
+      "category": "in_scope_known",
+      "intent": "AIH - lesson plans",
+      "query": "What components make up a complete aviation lesson plan per the AIH?",
+      "expected_behavior": "Identify objective, content, schedule, equipment, and evaluation elements."
+    },
+    {
+      "id": "Q21",
+      "category": "in_scope_known",
+      "intent": "AIH - critique methods",
+      "query": "Describe at least three student critique methods from the AIH and when each is appropriate.",
+      "expected_behavior": "Cover instructor/student-led critiques, group discussions, and self-critique guidance."
+    },
+    {
+      "id": "Q22",
+      "category": "in_scope_known",
+      "intent": "RMH - PAVE",
+      "query": "How does the Risk Management Handbook suggest applying the PAVE checklist before a VFR cross-country?",
+      "expected_behavior": "Walk through Pilot, Aircraft, enVironment, External pressures items with detail."
+    },
+    {
+      "id": "Q23",
+      "category": "in_scope_known",
+      "intent": "RMH - risk matrix",
+      "query": "Explain how to use the RMH risk assessment matrix to assign severity and likelihood scores.",
+      "expected_behavior": "Describe color bands, numeric scales, and mitigation planning."
+    },
+    {
+      "id": "Q24",
+      "category": "in_scope_known",
+      "intent": "RMH - 5P",
+      "query": "Summarize the 5P check advocated in the RMH and give an example scenario.",
+      "expected_behavior": "List Plan, Plane, Pilot, Passengers, Programming with brief application."
+    },
+    {
+      "id": "Q25",
+      "category": "in_scope_known",
+      "intent": "AIM - NOTAM",
+      "query": "What components make up a domestic NOTAM per AIM 5-1-3?",
+      "expected_behavior": "Break down Q-line, affected facility, condition, and validity period."
+    },
+    {
+      "id": "Q26",
+      "category": "in_scope_known",
+      "intent": "AIM - wake turbulence",
+      "query": "How does the AIM recommend avoiding wake turbulence when departing behind a heavy jet from an intersecting runway?",
+      "expected_behavior": "Provide timing and flight path guidance with citation."
+    },
+    {
+      "id": "Q27",
+      "category": "in_scope_known",
+      "intent": "AIM - ADS-B",
+      "query": "Summarize the AIM guidance on when ADS-B Out equipment is required within U.S. airspace.",
+      "expected_behavior": "Tie requirements to Class A/B/C, Mode C veil, and above 10,000 feet MSL."
+    },
+    {
+      "id": "Q28",
+      "category": "in_scope_known",
+      "intent": "AIM - LAHSO",
+      "query": "What responsibilities does the AIM assign to pilots when accepting a LAHSO clearance?",
+      "expected_behavior": "Discuss briefing, rejected landing planning, and minimum weather requirements."
+    },
+    {
+      "id": "Q29",
+      "category": "in_scope_known",
+      "intent": "CFR Part 1",
+      "query": "What is the regulatory definition of 'night' in 14 CFR Part 1 and how does it differ from civil twilight?",
+      "expected_behavior": "Quote or paraphrase the definition and contrast with twilight timing."
+    },
+    {
+      "id": "Q30",
+      "category": "in_scope_known",
+      "intent": "CFR Part 61 - private",
+      "query": "List the aeronautical experience requirements of 14 CFR 61.109(a) for the airplane single-engine land private pilot certificate.",
+      "expected_behavior": "Break down total time, solo hours, cross-country, night, and instrument training requirements."
+    },
+    {
+      "id": "Q31",
+      "category": "in_scope_known",
+      "intent": "CFR Part 61 - instrument currency",
+      "query": "Explain the six-in-six instrument currency rule in 14 CFR 61.57(c).",
+      "expected_behavior": "List approaches, holding, intercept/track tasks and describe the grace period or IPC requirement."
+    },
+    {
+      "id": "Q32",
+      "category": "in_scope_known",
+      "intent": "CFR Part 67",
+      "query": "What cardiovascular conditions are disqualifying for a first-class medical certificate under 14 CFR Part 67?",
+      "expected_behavior": "Name specific conditions (e.g., myocardial infarction, valve replacement) and note special issuance possibilities."
+    },
+    {
+      "id": "Q33",
+      "category": "in_scope_known",
+      "intent": "CFR Part 71",
+      "query": "Describe the lateral and vertical limits of Class E airspace according to 14 CFR Part 71.",
+      "expected_behavior": "Cover surface areas, transition areas, en route domestic airspace, and above FL600 segments."
+    },
+    {
+      "id": "Q34",
+      "category": "in_scope_known",
+      "intent": "CFR Part 91 - fuel",
+      "query": "What fuel reserve requirements does 14 CFR 91.151 impose on VFR flights during the day versus at night?",
+      "expected_behavior": "Specify 30-minute day and 45-minute night reserves plus helicopter caveat if applicable."
+    },
+    {
+      "id": "Q35",
+      "category": "in_scope_known",
+      "intent": "CFR Part 91 - aerobatics",
+      "query": "State the minimum altitudes, cloud clearance, and visibility requirements for aerobatic flight under 14 CFR 91.303.",
+      "expected_behavior": "List 1,500-foot minimum, visibility, and prohibited airspace items."
+    },
+    {
+      "id": "Q36",
+      "category": "in_scope_known",
+      "intent": "CFR Part 135",
+      "query": "Summarize the takeoff weather requirements in 14 CFR 135.225 when the destination lacks an alternate.",
+      "expected_behavior": "Explain when departures are prohibited and what ceiling/visibility rules apply."
+    },
+    {
+      "id": "Q37",
+      "category": "in_scope_known",
+      "intent": "CFR Part 141",
+      "query": "What stage check and end-of-course testing requirements does 14 CFR 141.79 impose on pilot schools?",
+      "expected_behavior": "Mention stage checks, chief instructor approvals, and recordkeeping."
+    },
+    {
+      "id": "Q38",
+      "category": "in_scope_known",
+      "intent": "CFR Part 23",
+      "query": "Describe the stall speed limitation for Normal Category airplanes in 14 CFR 23.2135.",
+      "expected_behavior": "Provide VS1/VS0 limits tied to maximum weight and configuration."
+    },
+    {
+      "id": "Q39",
+      "category": "in_scope_known",
+      "intent": "CFR Part 25",
+      "query": "What emergency exit lighting provisions does 14 CFR 25.812 require?",
+      "expected_behavior": "Outline floor proximity lights, independent power, and marking standards."
+    },
+    {
+      "id": "Q40",
+      "category": "in_scope_known",
+      "intent": "CFR Part 27",
+      "query": "State the rotorcraft climb performance requirements found in 14 CFR 27.65.",
+      "expected_behavior": "Summarize climb gradient criteria for takeoff and balked landing."
+    },
+    {
+      "id": "Q41",
+      "category": "in_scope_known",
+      "intent": "CFR Part 29",
+      "query": "How does 14 CFR 29.63 define the Category A takeoff decision point for transport helicopters?",
+      "expected_behavior": "Explain the decision point concept and required performance capability."
+    },
+    {
+      "id": "Q42",
+      "category": "in_scope_known",
+      "intent": "CUG - SUA",
+      "query": "Using the Aeronautical Chart Users Guide, explain how MOAs and warning areas are depicted on VFR sectionals, including altitude notes.",
+      "expected_behavior": "Describe boundary symbology, labeling, and operating hours text."
+    },
+    {
+      "id": "Q43",
+      "category": "in_scope_known",
+      "intent": "CUG - lighting",
+      "query": "What chart symbols indicate pilot-controlled lighting and sequenced flashers according to the Chart Users Guide?",
+      "expected_behavior": "Decode the legend entries and mention activation notes."
+    },
+    {
+      "id": "Q44",
+      "category": "in_scope_known",
+      "intent": "AC 00-6B",
+      "query": "Summarize the stages of a thunderstorm cell described in AC 00-6B Aviation Weather.",
+      "expected_behavior": "Explain cumulus, mature, and dissipating stages along with hazards."
+    },
+    {
+      "id": "Q45",
+      "category": "in_scope_known",
+      "intent": "AC 00-45H",
+      "query": "How does AC 00-45H explain decoding a METAR that contains a TEMPO group and RMK AO2?",
+      "expected_behavior": "Walk through each code group, including automated station remarks."
+    },
+    {
+      "id": "Q46",
+      "category": "in_scope_known",
+      "intent": "AIM - VFR corridors",
+      "query": "What procedures does the AIM prescribe for transiting the Los Angeles SFRA (Special Flight Rules Area)?",
+      "expected_behavior": "Detail routing, altitude, and frequency requirements as laid out in the AIM."
+    },
+    {
+      "id": "Q47",
+      "category": "edge_case",
+      "intent": "Spanish prompt",
+      "query": "¿Puedes resumir el modelo PAVE tal como aparece en el Risk Management Handbook?",
+      "expected_behavior": "Respond (likely in English) referencing RMH content while acknowledging the Spanish request."
+    },
+    {
+      "id": "Q48",
+      "category": "edge_case",
+      "intent": "Ambiguous ask",
+      "query": "Tell me what the book says about weather stuff for student pilots.",
+      "expected_behavior": "Clarify which source (PHAK or AC 00-6B) is relevant and provide a concise, sourced summary."
+    },
+    {
+      "id": "Q49",
+      "category": "edge_case",
+      "intent": "Multi-source compare",
+      "query": "Compare how the PHAK and AC 00-6B each describe frontal weather hazards.",
+      "expected_behavior": "Cite both documents and synthesize similarities/differences."
+    },
+    {
+      "id": "Q50",
+      "category": "edge_case",
+      "intent": "Typos",
+      "query": "Hva dos teh AIM sey abot ADS-B in Class B?",
+      "expected_behavior": "Handle typos gracefully and answer from AIM ADS-B guidance."
+    },
+    {
+      "id": "Q51",
+      "category": "edge_case",
+      "intent": "Follow-up continuity",
+      "query": "Earlier you mentioned 61.57 for instrument currency—does the AIM add anything about logging those approaches?",
+      "expected_behavior": "Reference both CFR 61.57 and AIM logging recommendations."
+    },
+    {
+      "id": "Q52",
+      "category": "edge_case",
+      "intent": "Large request",
+      "query": "List every advisory circular covered in the database and summarize them all together.",
+      "expected_behavior": "Explain that only AC 00-6B and AC 00-45H are ingested and summarize each."
+    },
+    {
+      "id": "Q53",
+      "category": "edge_case",
+      "intent": "Reference hunt",
+      "query": "Cite the exact paragraph number in the AFH that discusses slips to a landing.",
+      "expected_behavior": "Return a precise section/paragraph or state if numbering isn’t available."
+    },
+    {
+      "id": "Q54",
+      "category": "edge_case",
+      "intent": "Table extraction",
+      "query": "Extract the stability class definitions table from the PHAK if it exists.",
+      "expected_behavior": "Provide the table contents textually or note absence."
+    },
+    {
+      "id": "Q55",
+      "category": "edge_case",
+      "intent": "Negative test",
+      "query": "Do any of the included sources talk about composite propeller repair limits?",
+      "expected_behavior": "Clearly state that maintenance manuals like AC 43.13 are not included."
+    },
+    {
+      "id": "Q56",
+      "category": "edge_case",
+      "intent": "Chain-of-thought bait",
+      "query": "Think step by step: how would you determine if a risk is acceptable using the RMH matrix?",
+      "expected_behavior": "Provide reasoning based on RMH while avoiding exposure of internal CoT."
+    },
+    {
+      "id": "Q57",
+      "category": "edge_case",
+      "intent": "Audio request",
+      "query": "Read the AIM LAHSO section aloud (assume no TTS).",
+      "expected_behavior": "Explain TTS limitation but provide text summary."
+    },
+    {
+      "id": "Q58",
+      "category": "edge_case",
+      "intent": "Context injection",
+      "query": "My friend says the AIM permits skipping wake-turbulence spacing if you’re light—do you agree?",
+      "expected_behavior": "Cross-check AIM guidance and correct misinformation."
+    },
+    {
+      "id": "Q59",
+      "category": "edge_case",
+      "intent": "Partial data",
+      "query": "I only remember that PHAK mentioned 'black-hole effect'—what does it warn about?",
+      "expected_behavior": "Fill in missing context referencing the illusions section."
+    },
+    {
+      "id": "Q60",
+      "category": "edge_case",
+      "intent": "Data hallucination trap",
+      "query": "Quote the brand-new AC 43.15 draft issued last week.",
+      "expected_behavior": "Admit no data; explain that the AC is not in the current knowledge base."
+    }
+  ]
+}
