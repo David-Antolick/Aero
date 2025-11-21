@@ -19,7 +19,7 @@
   },
   {
     "id": "IPH",
-    "title": "Instrument Procedures Handbook (FAA-H-8083-9B)",
+    "title": "Instrument Procedures Handbook (FAA-H-8083-16B)",
     "url": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/instrument_procedures_handbook/FAA-H-8083-16B.pdf",
     "filename": "Instrument_Procedures_Handbook.pdf"
   },
@@ -37,75 +37,9 @@
   },
   {
     "id": "AIM",
-    "title": "Aeronautical Information Manual (2023)",
-    "url": "https://www.faa.gov/air_traffic/publications/media/AIM-Basic-w-Chg1-and-Chg2-dtd-3-21-24.pdf",
+    "title": "Aeronautical Information Manual (2025)",
+    "url": "https://www.faa.gov/air_traffic/publications/media/AIM_Basic_w_Chg_1_dtd_8-7-25_FINAL.pdf",
     "filename": "AIM_Basic_2024-03-21.pdf"
-  },
-  {
-    "id": "CFR1",
-    "title": "14 CFR Part 1 - Definitions and Abbreviations",
-    "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title14-vol1/pdf/CFR-2025-title14-vol1-part1.pdf",
-    "filename": "14CFR_Part1.pdf"
-  },
-  {
-    "id": "CFR61",
-    "title": "14 CFR Part 61 - Certification: Pilots, Flight Instructors, Ground Instructors",
-    "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title14-vol2/pdf/CFR-2025-title14-vol2-part61.pdf",
-    "filename": "14CFR_Part61.pdf"
-  },
-  {
-    "id": "CFR67",
-    "title": "14 CFR Part 67 - Medical Standards and Certification",
-    "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title14-vol2/pdf/CFR-2025-title14-vol2-part67.pdf",
-    "filename": "14CFR_Part67.pdf"
-  },
-  {
-    "id": "CFR71",
-    "title": "14 CFR Part 71 - Airspace",
-    "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title14-vol2/pdf/CFR-2025-title14-vol2-part71.pdf",
-    "filename": "14CFR_Part71.pdf"
-  },
-  {
-    "id": "CFR91",
-    "title": "14 CFR Part 91 - General Operating and Flight Rules",
-    "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title14-vol2/pdf/CFR-2025-title14-vol2-part91.pdf",
-    "filename": "14CFR_Part91.pdf"
-  },
-  {
-    "id": "CFR135",
-    "title": "14 CFR Part 135 - Operating Requirements: Commuter and On Demand Operations",
-    "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title14-vol3/pdf/CFR-2025-title14-vol3-part135.pdf",
-    "filename": "14CFR_Part135.pdf"
-  },
-  {
-    "id": "CFR141",
-    "title": "14 CFR Part 141 - Pilot Schools",
-    "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title14-vol3/pdf/CFR-2025-title14-vol3-part141.pdf",
-    "filename": "14CFR_Part141.pdf"
-  },
-  {
-    "id": "CFR23",
-    "title": "14 CFR Part 23 - Airworthiness Standards: Normal Category Airplanes",
-    "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title14-vol1/pdf/CFR-2025-title14-vol1-part23.pdf",
-    "filename": "14CFR_Part23.pdf"
-  },
-  {
-    "id": "CFR25",
-    "title": "14 CFR Part 25 - Airworthiness Standards: Transport Category Airplanes",
-    "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title14-vol1/pdf/CFR-2025-title14-vol1-part25.pdf",
-    "filename": "14CFR_Part25.pdf"
-  },
-  {
-    "id": "CFR27",
-    "title": "14 CFR Part 27 - Airworthiness Standards: Normal Category Rotorcraft",
-    "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title14-vol1/pdf/CFR-2025-title14-vol1-part27.pdf",
-    "filename": "14CFR_Part27.pdf"
-  },
-  {
-    "id": "CFR29",
-    "title": "14 CFR Part 29 - Airworthiness Standards: Transport Category Rotorcraft",
-    "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title14-vol1/pdf/CFR-2025-title14-vol1-part29.pdf",
-    "filename": "14CFR_Part29.pdf"
   },
   {
     "id": "CUG",
@@ -113,28 +47,263 @@
     "url": "https://aeronav.faa.gov/user_guide/cug-complete_20250612.pdf",
     "filename": "Aeronautical_Chart_Users_Guide.pdf"
   },
-  {
-    "id": "AC006B",
-    "title": "AC 00-6B - Aviation Weather (2016)",
-    "url": "https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_00-6B.pdf",
-    "filename": "AC_00-6B_Aviation_Weather.pdf"
-  },
+
   {
     "id": "AC0045H",
     "title": "AC 00-45H - Aviation Weather Services (2016)",
-    "url": "https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_00-45H.pdf",
+    "url": "https://www.faa.gov/documentlibrary/media/advisory_circular/ac_00-45h.pdf",
     "filename": "AC_00-45H_Aviation_Weather_Services.pdf"
-  },
-    {
-    "id": "CFR43",
-    "title": "14 CFR Part 43 — Maintenance, Preventive Maintenance, Rebuilding, and Alteration (2025 Edition)",
-    "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title14-vol1/pdf/CFR-2025-title14-vol1-part43.pdf",
-    "filename": "14CFR_Part43_2025.pdf"
   },
   {
     "id": "AC61-65",
     "title": "AC 61-65J – Certification: Pilots and Flight and Ground Instructors (10/30/2024)",
-    "url": "https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_61-65J.pdf",
+    "url": "https://www.faa.gov/documentlibrary/media/advisory_circular/ac_61-65J.pdf",
     "filename": "AC_61-65J_Certification_Pilots_and_Flight_and_Ground_Instructors.pdf"
+  },
+    {
+    "id": "AWH",
+    "title": "Aviation Weather Handbook (FAA-H-8083-28A, 2024)",
+    "url": "https://www.faa.gov/sites/faa.gov/files/FAA-H-8083-28A_FAA_Web.pdf",
+    "filename": "Aviation_Weather_Handbook_8083-28A_2024.pdf"
+  },
+  {
+    "id": "WBH",
+    "title": "Weight & Balance Handbook (FAA-H-8083-1B)",
+    "url": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/FAA-H-8083-1.pdf",
+    "filename": "Weight_and_Balance_Handbook_8083-1B.pdf"
+  },
+    {
+    "id": "CFR1",
+    "title": "14 CFR Part 1 - Definitions and Abbreviations",
+    "url": "https://www.govinfo.gov/link/cfr/14/1?link-type=pdf&year=mostrecent",
+    "filename": "14CFR_Part1.pdf"
+  },
+  {
+    "id": "CFR21",
+    "title": "14 CFR Part 21 - Certification Procedures for Products and Articles",
+    "url": "https://www.govinfo.gov/link/cfr/14/21?link-type=pdf&year=mostrecent",
+    "filename": "14CFR_Part21.pdf"
+  },
+  {
+    "id": "CFR23",
+    "title": "14 CFR Part 23 - Airworthiness Standards: Normal Category Airplanes",
+    "url": "https://www.govinfo.gov/link/cfr/14/23?link-type=pdf&year=mostrecent",
+    "filename": "14CFR_Part23.pdf"
+  },
+  {
+    "id": "CFR25",
+    "title": "14 CFR Part 25 - Airworthiness Standards: Transport Category Airplanes",
+    "url": "https://www.govinfo.gov/link/cfr/14/25?link-type=pdf&year=mostrecent",
+    "filename": "14CFR_Part25.pdf"
+  },
+  {
+    "id": "CFR27",
+    "title": "14 CFR Part 27 - Airworthiness Standards: Normal Category Rotorcraft",
+    "url": "https://www.govinfo.gov/link/cfr/14/27?link-type=pdf&year=mostrecent",
+    "filename": "14CFR_Part27.pdf"
+  },
+  {
+    "id": "CFR29",
+    "title": "14 CFR Part 29 - Airworthiness Standards: Transport Category Rotorcraft",
+    "url": "https://www.govinfo.gov/link/cfr/14/29?link-type=pdf&year=mostrecent",
+    "filename": "14CFR_Part29.pdf"
+  },
+  {
+    "id": "CFR39",
+    "title": "14 CFR Part 39 - Airworthiness Directives",
+    "url": "https://www.govinfo.gov/link/cfr/14/39?link-type=pdf&year=mostrecent",
+    "filename": "14CFR_Part39.pdf"
+  },
+  {
+    "id": "CFR43",
+    "title": "14 CFR Part 43 - Maintenance, Preventive Maintenance, Rebuilding, and Alteration",
+    "url": "https://www.govinfo.gov/link/cfr/14/43?link-type=pdf&year=mostrecent",
+    "filename": "14CFR_Part43.pdf"
+  },
+  {
+    "id": "CFR61",
+    "title": "14 CFR Part 61 - Certification: Pilots, Flight Instructors, and Ground Instructors",
+    "url": "https://www.govinfo.gov/link/cfr/14/61?link-type=pdf&year=mostrecent",
+    "filename": "14CFR_Part61.pdf"
+  },
+  {
+    "id": "CFR63",
+    "title": "14 CFR Part 63 - Certification: Flight Crewmembers Other Than Pilots",
+    "url": "https://www.govinfo.gov/link/cfr/14/63?link-type=pdf&year=mostrecent",
+    "filename": "14CFR_Part63.pdf"
+  },
+  {
+    "id": "CFR65",
+    "title": "14 CFR Part 65 - Certification: Airmen Other Than Flight Crewmembers",
+    "url": "https://www.govinfo.gov/link/cfr/14/65?link-type=pdf&year=mostrecent",
+    "filename": "14CFR_Part65.pdf"
+  },
+  {
+    "id": "CFR67",
+    "title": "14 CFR Part 67 - Medical Standards and Certification",
+    "url": "https://www.govinfo.gov/link/cfr/14/67?link-type=pdf&year=mostrecent",
+    "filename": "14CFR_Part67.pdf"
+  },
+  {
+    "id": "CFR71",
+    "title": "14 CFR Part 71 - Designation of Class A, B, C, D, and E Airspace Areas; Air Traffic Service Routes; and Reporting Points",
+    "url": "https://www.govinfo.gov/link/cfr/14/71?link-type=pdf&year=mostrecent",
+    "filename": "14CFR_Part71.pdf"
+  },
+  {
+    "id": "CFR73",
+    "title": "14 CFR Part 73 - Special Use Airspace",
+    "url": "https://www.govinfo.gov/link/cfr/14/73?link-type=pdf&year=mostrecent",
+    "filename": "14CFR_Part73.pdf"
+  },
+  {
+    "id": "CFR91",
+    "title": "14 CFR Part 91 - General Operating and Flight Rules",
+    "url": "https://www.govinfo.gov/link/cfr/14/91?link-type=pdf&year=mostrecent",
+    "filename": "14CFR_Part91.pdf"
+  },
+  {
+    "id": "CFR93",
+    "title": "14 CFR Part 93 - Special Air Traffic Rules",
+    "url": "https://www.govinfo.gov/link/cfr/14/93?link-type=pdf&year=mostrecent",
+    "filename": "14CFR_Part93.pdf"
+  },
+  {
+    "id": "CFR95",
+    "title": "14 CFR Part 95 - IFR Altitudes",
+    "url": "https://www.govinfo.gov/link/cfr/14/95?link-type=pdf&year=mostrecent",
+    "filename": "14CFR_Part95.pdf"
+  },
+  {
+    "id": "CFR97",
+    "title": "14 CFR Part 97 - Standard Instrument Procedures",
+    "url": "https://www.govinfo.gov/link/cfr/14/97?link-type=pdf&year=mostrecent",
+    "filename": "14CFR_Part97.pdf"
+  },
+  {
+    "id": "CFR103",
+    "title": "14 CFR Part 103 - Ultralight Vehicles",
+    "url": "https://www.govinfo.gov/link/cfr/14/103?link-type=pdf&year=mostrecent",
+    "filename": "14CFR_Part103.pdf"
+  },
+  {
+    "id": "CFR105",
+    "title": "14 CFR Part 105 - Parachute Operations",
+    "url": "https://www.govinfo.gov/link/cfr/14/105?link-type=pdf&year=mostrecent",
+    "filename": "14CFR_Part105.pdf"
+  },
+  {
+    "id": "CFR107",
+    "title": "14 CFR Part 107 - Small Unmanned Aircraft Systems",
+    "url": "https://www.govinfo.gov/link/cfr/14/107?link-type=pdf&year=mostrecent",
+    "filename": "14CFR_Part107.pdf"
+  },
+  {
+    "id": "CFR110",
+    "title": "14 CFR Part 110 - General Requirements",
+    "url": "https://www.govinfo.gov/link/cfr/14/110?link-type=pdf&year=mostrecent",
+    "filename": "14CFR_Part110.pdf"
+  },
+  {
+    "id": "CFR117",
+    "title": "14 CFR Part 117 - Flight and Duty Limitations and Rest Requirements: Flightcrew Members",
+    "url": "https://www.govinfo.gov/link/cfr/14/117?link-type=pdf&year=mostrecent",
+    "filename": "14CFR_Part117.pdf"
+  },
+  {
+    "id": "CFR119",
+    "title": "14 CFR Part 119 - Certification: Air Carriers and Commercial Operators",
+    "url": "https://www.govinfo.gov/link/cfr/14/119?link-type=pdf&year=mostrecent",
+    "filename": "14CFR_Part119.pdf"
+  },
+  {
+    "id": "CFR121",
+    "title": "14 CFR Part 121 - Operating Requirements: Domestic, Flag, and Supplemental Operations",
+    "url": "https://www.govinfo.gov/link/cfr/14/121?link-type=pdf&year=mostrecent",
+    "filename": "14CFR_Part121.pdf"
+  },
+  {
+    "id": "CFR125",
+    "title": "14 CFR Part 125 - Certification and Operations: Airplanes Having a Seating Capacity of 20 or More Passengers or a Maximum Payload Capacity of 6,000 Pounds or More",
+    "url": "https://www.govinfo.gov/link/cfr/14/125?link-type=pdf&year=mostrecent",
+    "filename": "14CFR_Part125.pdf"
+  },
+  {
+    "id": "CFR129",
+    "title": "14 CFR Part 129 - Operations: Foreign Air Carriers and Foreign Operators of U.S.-Registered Aircraft",
+    "url": "https://www.govinfo.gov/link/cfr/14/129?link-type=pdf&year=mostrecent",
+    "filename": "14CFR_Part129.pdf"
+  },
+  {
+    "id": "CFR133",
+    "title": "14 CFR Part 133 - Rotorcraft External-Load Operations",
+    "url": "https://www.govinfo.gov/link/cfr/14/133?link-type=pdf&year=mostrecent",
+    "filename": "14CFR_Part133.pdf"
+  },
+  {
+    "id": "CFR135",
+    "title": "14 CFR Part 135 - Operating Requirements: Commuter and On Demand Operations",
+    "url": "https://www.govinfo.gov/link/cfr/14/135?link-type=pdf&year=mostrecent",
+    "filename": "14CFR_Part135.pdf"
+  },
+  {
+    "id": "CFR136",
+    "title": "14 CFR Part 136 - Commercial Air Tours and National Parks Air Tour Management",
+    "url": "https://www.govinfo.gov/link/cfr/14/136?link-type=pdf&year=mostrecent",
+    "filename": "14CFR_Part136.pdf"
+  },
+  {
+    "id": "CFR137",
+    "title": "14 CFR Part 137 - Agricultural Aircraft Operations",
+    "url": "https://www.govinfo.gov/link/cfr/14/137?link-type=pdf&year=mostrecent",
+    "filename": "14CFR_Part137.pdf"
+  },
+  {
+    "id": "CFR139",
+    "title": "14 CFR Part 139 - Certification of Airports",
+    "url": "https://www.govinfo.gov/link/cfr/14/139?link-type=pdf&year=mostrecent",
+    "filename": "14CFR_Part139.pdf"
+  },
+  {
+    "id": "CFR141",
+    "title": "14 CFR Part 141 - Pilot Schools",
+    "url": "https://www.govinfo.gov/link/cfr/14/141?link-type=pdf&year=mostrecent",
+    "filename": "14CFR_Part141.pdf"
+  },
+  {
+    "id": "CFR142",
+    "title": "14 CFR Part 142 - Training Centers",
+    "url": "https://www.govinfo.gov/link/cfr/14/142?link-type=pdf&year=mostrecent",
+    "filename": "14CFR_Part142.pdf"
+  },
+  {
+    "id": "CFR170",
+    "title": "14 CFR Part 170 - Establishment and Discontinuance Criteria for Air Traffic Control Services and Navigational Facilities",
+    "url": "https://www.govinfo.gov/link/cfr/14/170?link-type=pdf&year=mostrecent",
+    "filename": "14CFR_Part170.pdf"
+  },
+  {
+    "id": "CFR171",
+    "title": "14 CFR Part 171 - Non-Federal Navigation Facilities",
+    "url": "https://www.govinfo.gov/link/cfr/14/171?link-type=pdf&year=mostrecent",
+    "filename": "14CFR_Part171.pdf"
+  },
+  {
+    "id": "CFR172",
+    "title": "14 CFR Part 172 - Hazardous Materials Table, Special Provisions, Hazardous Materials Communications, Emergency Response Information, Training Requirements, and Security Plans",
+    "url": "https://www.govinfo.gov/link/cfr/49/172?link-type=pdf&year=mostrecent",
+    "filename": "49CFR_Part172.pdf"
+  },
+  {
+    "id": "CFR175",
+    "title": "14 CFR Part 175 - Carriage by Aircraft",
+    "url": "https://www.govinfo.gov/link/cfr/49/175?link-type=pdf&year=mostrecent",
+    "filename": "49CFR_Part175.pdf"
+  },
+  {
+    "id": "CFR183",
+    "title": "14 CFR Part 183 - Representatives of the Administrator",
+    "url": "https://www.govinfo.gov/link/cfr/14/183?link-type=pdf&year=mostrecent",
+    "filename": "14CFR_Part183.pdf"
   }
 ]
