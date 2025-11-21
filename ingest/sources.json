@@ -124,5 +124,17 @@
     "title": "AC 00-45H - Aviation Weather Services (2016)",
     "url": "https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_00-45H.pdf",
     "filename": "AC_00-45H_Aviation_Weather_Services.pdf"
+  },
+    {
+    "id": "CFR43",
+    "title": "14 CFR Part 43 — Maintenance, Preventive Maintenance, Rebuilding, and Alteration (2025 Edition)",
+    "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title14-vol1/pdf/CFR-2025-title14-vol1-part43.pdf",
+    "filename": "14CFR_Part43_2025.pdf"
+  },
+  {
+    "id": "AC61-65",
+    "title": "AC 61-65J – Certification: Pilots and Flight and Ground Instructors (10/30/2024)",
+    "url": "https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_61-65J.pdf",
+    "filename": "AC_61-65J_Certification_Pilots_and_Flight_and_Ground_Instructors.pdf"
   }
 ]
