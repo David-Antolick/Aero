@@ -60,7 +60,32 @@
     "url": "https://www.faa.gov/documentlibrary/media/advisory_circular/ac_61-65J.pdf",
     "filename": "AC_61-65J_Certification_Pilots_and_Flight_and_Ground_Instructors.pdf"
   },
-    {
+
+  {
+    "id": "AC61-98E",
+    "title": "AC 61-98E – Currency Requirements and Guidance for the Flight Review and Instrument Proficiency Check (2024)",
+    "url": "https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_61-98E.pdf",
+    "filename": "AC_61-98E_Currency_Requirements_and_Guidance.pdf"
+  },
+  {
+    "id": "AC61-67",
+    "title": "AC 61-67C – Stall and Spin Awareness Training (2016)",
+    "url": "https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_61-67C_Chg_2.pdf",
+    "filename": "AC_61-67C_Stall_and_Spin_Awareness_Training.pdf"
+  },
+  {
+    "id": "AC61-83K",
+    "title": "AC 61-83K – Nationally Scheduled Pilot School Certification (2024)",
+    "url": "https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_61-83K.pdf",
+    "filename": "AC_61-83K_Pilot_School_Certification.pdf"
+  },
+  {
+    "id": "AC60-22",
+    "title": "AC 60-22 – Aeronautical Decision Making (1991)",
+    "url": "https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_60-22.pdf",
+    "filename": "AC_60-22_Aeronautical_Decision_Making.pdf"
+  },
+  {
     "id": "AWH",
     "title": "Aviation Weather Handbook (FAA-H-8083-28A, 2024)",
     "url": "https://www.faa.gov/sites/faa.gov/files/FAA-H-8083-28A_FAA_Web.pdf",

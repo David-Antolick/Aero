@@ -164,8 +164,24 @@
     "path": "/workspaces/Aero/data/AC_00-6B_Aviation_Weather.pdf"
   },
   {
+    "id": "AC60-22",
+    "path": "/workspaces/Aero/data/AC_60-22_Aeronautical_Decision_Making.pdf"
+  },
+  {
     "id": "AC61-65",
     "path": "/workspaces/Aero/data/AC_61-65J_Certification_Pilots_and_Flight_and_Ground_Instructors.pdf"
+  },
+  {
+    "id": "AC61-67",
+    "path": "/workspaces/Aero/data/AC_61-67C_Stall_and_Spin_Awareness_Training.pdf"
+  },
+  {
+    "id": "AC61-83K",
+    "path": "/workspaces/Aero/data/AC_61-83K_Pilot_School_Certification.pdf"
+  },
+  {
+    "id": "AC61-98E",
+    "path": "/workspaces/Aero/data/AC_61-98E_Currency_Requirements_and_Guidance.pdf"
   },
   {
     "id": "AIM",
