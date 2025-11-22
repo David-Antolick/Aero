@@ -1,5 +1,5 @@
 import os, json, uuid, yaml, argparse
-from tqdm import tqdm
+import time
 import chromadb
 from sentence_transformers import SentenceTransformer
 import torch
@@ -109,14 +109,14 @@ def main():
             continue
 
         print(f"[INFO] {sid}: ingesting with Docling hybrid -> {pdf_path}")
+        start_time = time.time()
         added = 0
         # Collect in small batches to reduce add() overhead
         buf_ids, buf_docs, buf_meta = [], [], []
         BATCH = 64
 
         # Iterate docling chunks
-        chunks_iter = list(chunker.chunks(pdf_path))
-        for text, meta in tqdm(chunks_iter, desc=f"{sid} chunks"):
+        for text, meta in chunker.chunks(pdf_path):
             page = meta["page"]
             uid = f"{sid}-p{page}-{uuid.uuid4().hex[:8]}"
             buf_ids.append(uid)
@@ -141,7 +141,8 @@ def main():
             coll.add(ids=buf_ids, documents=buf_docs, metadatas=buf_meta)
             added += len(buf_ids)
 
-        print(f"[OK] {sid}: chunks_added={added}")
+        elapsed = time.time() - start_time
+        print(f"[OK] {sid}: chunks_added={added} in {elapsed:.2f}s")
         total_added += added
 
     print(f"[SUCCESS] Total chunks added: {total_added} into {cfg['persist_dir']} (collection '{COLLECTION_NAME}')")

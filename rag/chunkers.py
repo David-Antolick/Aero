@@ -2,7 +2,10 @@
 from typing import Iterator, Tuple, Dict, Any, Optional
 from functools import lru_cache
 from transformers import AutoTokenizer
-from docling.document_converter import DocumentConverter
+from docling.datamodel.base_models import InputFormat
+from docling.datamodel.pipeline_options import PdfPipelineOptions
+from docling.document_converter import DocumentConverter, PdfFormatOption
+from docling.backend.pypdfium2_backend import PyPdfiumDocumentBackend
 from docling.chunking import HybridChunker
 import re
 import difflib
@@ -19,7 +22,21 @@ class DoclingHybridChunker:
 
 
         self.tok = AutoTokenizer.from_pretrained(embed_model_name)
-        self.converter = DocumentConverter()
+
+        pipeline_options = PdfPipelineOptions()
+        pipeline_options.do_ocr = False
+        pipeline_options.do_table_structure = True
+        pipeline_options.do_code_enrichment = False
+
+        self.converter = DocumentConverter(
+            format_options={
+                InputFormat.PDF: PdfFormatOption(
+                    pipeline_options=pipeline_options,
+                    backend=PyPdfiumDocumentBackend,
+                )
+            }
+        )
+
         self.hybrid = HybridChunker(
             tokenizer=self.tok,
             max_tokens=max_tokens,

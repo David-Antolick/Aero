@@ -81,24 +81,30 @@ def _normalize_content(raw: Any) -> str:
     return str(raw)
 
 
+def _get_message_field(message: Any, field: str) -> Any:
+    if message is None:
+        return None
+    value = getattr(message, field, None)
+    if value is not None:
+        return value
+    if isinstance(message, dict):
+        return message.get(field)
+    return None
+
+
+def extract_message_components(message: Any) -> tuple[str, str, str]:
+    """Return (content_text, reasoning_text, best_text)."""
+    content_text = _normalize_content(_get_message_field(message, "content")).strip()
+    reasoning_text = _normalize_content(_get_message_field(message, "reasoning_content")).strip()
+    best_text = content_text or reasoning_text
+    if not best_text:
+        best_text = _normalize_content(_get_message_field(message, "text")).strip()
+    return content_text, reasoning_text, best_text
+
+
 def extract_message_text(message: Any) -> str:
     """Return best-effort text from an OpenAI ChatCompletionMessage."""
-    if message is None:
-        return ""
-    # Native content field
-    content = getattr(message, "content", None)
-    if content:
-        return _normalize_content(content)
-    # Some servers (e.g., gpt-oss-20b) place text in reasoning_content
-    reasoning = getattr(message, "reasoning_content", None)
-    if reasoning:
-        return _normalize_content(reasoning)
-    # Handle dicts or other containers
-    if isinstance(message, dict):
-        for key in ("content", "reasoning_content", "text"):
-            if message.get(key):
-                return _normalize_content(message[key])
-    return ""
+    return extract_message_components(message)[2]
 
 
 def read_text(path: str) -> str:
@@ -182,33 +188,52 @@ def main() -> None:
         "Include citations inline using the format [ID p.N]. If information is not in the context, say you don't have it."
     )
 
-    messages = [
-        {"role": "system", "content": sys_prompt},
-        {"role": "system", "content": instruction},
-        {"role": "system", "content": "Context:\n" + context_text},
-        {"role": "user", "content": args.q},
-    ]
+    def build_messages(ctx_text: str) -> List[Dict[str, str]]:
+        return [
+            {"role": "system", "content": sys_prompt},
+            {"role": "system", "content": instruction},
+            {"role": "system", "content": "Context:\n" + ctx_text},
+            {"role": "user", "content": args.q},
+        ]
 
     # LLM call
     base_url = os.getenv("AERO_LLM_BASE_URL")
     api_key = os.getenv("AERO_LLM_API_KEY", "glm-local")
     model = os.getenv("AERO_LLM_MODEL", "gpt-oss-20b")
 
-    try:
+    def invoke_llm(blocks: List[str]) -> tuple[str, str, str, Any]:
+        ctx_text = "\n\n".join(blocks)
         oai = OpenAI(base_url=base_url, api_key=api_key)
         resp = oai.chat.completions.create(
             model=model,
-            messages=messages,
+            messages=build_messages(ctx_text),
             temperature=0.0,
             max_tokens=2048,
         )
         choice = resp.choices[0] if resp.choices else None
         message = choice.message if choice else None
-        answer = extract_message_text(message).strip()
+        content_text, reasoning_text, answer = extract_message_components(message)
+        return content_text, reasoning_text, answer, message
+
+    try:
+        content_text, reasoning_text, answer, message = invoke_llm(context_blocks)
+        if not answer and len(context_blocks) > 1:
+            print("[INFO] Retrying with fewer context blocks to recover answer...", file=sys.stderr)
+            fallback_blocks = context_blocks[:1]
+            content_text, reasoning_text, answer, message = invoke_llm(fallback_blocks)
         if not answer:
-            print("[WARN] LLM response contained no text payload; raw message logged above.", file=sys.stderr)
+            if message is not None:
+                print(f"[DEBUG] Raw message: {message!r}", file=sys.stderr)
+            print("[WARN] LLM response contained no text payload.", file=sys.stderr)
         print("\n=== ANSWER ===\n")
-        print(answer)
+        print(answer or "[no assistant text]")
+        if content_text and content_text != answer:
+            print("\n=== CONTENT FIELD ===\n")
+            print(content_text)
+        if reasoning_text:
+            label = "REASONING FIELD" if content_text else "MODEL REASONING"
+            print(f"\n=== {label} ===\n")
+            print(reasoning_text)
         print("\n=== DEBUG: First context block ===\n")
         print(context_blocks[0])
     except OpenAIError as e:
